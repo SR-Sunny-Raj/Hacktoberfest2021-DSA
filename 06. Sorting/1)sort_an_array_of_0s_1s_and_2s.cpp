@@ -42,24 +42,35 @@ Constraints:
 // } Driver Code Ends
 //User function Template for C
 
+// Modified existing code by swapping elements in a single loop instead of O(2n) complexity it will take only O(n)
+
+
 void sort012(int ar[], int n)
 {
-    int a = 0, b = 0, c = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (ar[i] == 0)
-            a++;
-        if (ar[i] == 1)
-            b++;
-        if (ar[i] == 2)
-            c++;
+    int lo = 0;
+    int hi = arr_size - 1;
+    int mid = 0;
+ 
+    
+    while (mid <= hi) {
+        switch (a[mid]) {
+ 
+        // If the element is 0
+        case 0:
+            swap(a[lo++], a[mid++]);
+            break;
+ 
+        // If the element is 1 .
+        case 1:
+            mid++;
+            break;
+ 
+        // If the element is 2
+        case 2:
+            swap(a[mid], a[hi--]);
+            break;
+        }
     }
-    for (int i = 0; i < a; i++)
-        ar[i] = 0;
-    for (int i = 0; i < b; i++)
-        ar[i + a] = 1;
-    for (int i = 0; i < c; i++)
-        ar[i + a + b] = 2;
 }
 
 // { Driver Code Starts.
