@@ -39,6 +39,14 @@ public:
     long long int isPerfectSquare(long long int n)
     {
         // code here
+        if (n >= 0) {
+           long long root = sqrt(n);
+           return (root * root == n);
+         }
+         // else return 0 if n<0
+        return 0;
+        // second or alternative approach using ceil and floor;
+        // return ceil((double)sqrt(n)) == floor((double)sqrt(n));
     }
 };
 
