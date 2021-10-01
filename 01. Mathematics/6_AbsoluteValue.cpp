@@ -1,6 +1,7 @@
 // { Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
+#define CHARBIT 8
 
 // } Driver Code Ends
 // User function Template for C++
@@ -11,6 +12,8 @@ public:
     int absolute(int I)
     {
         // Your code goes here
+        int const mask = I >> (sizeof(int) * CHARBIT - 1);
+        return ((I + mask) ^ mask);
     }
 };
 
