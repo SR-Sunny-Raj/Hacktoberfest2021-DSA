@@ -8,16 +8,8 @@ class Solution
 public:
     int setBits(int N)
     {
-        int count = 0;
-
-        for (int i = 31; i >= 0; i--)
-        {
-            if (N & (1 << i))
-            {
-                count++;
-            }
-        }
-        return count;
+        // Write Your Code here
+       return __builtin_popcount(N) ;
     }
 };
 
