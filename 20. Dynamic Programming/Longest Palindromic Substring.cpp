@@ -1,16 +1,4 @@
-# Question Link : https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string1956/1/#  
-> https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1#
-> Leetcode : https://leetcode.com/problems/longest-palindromic-substring/
 
-## Video Solution ( MINE ) : 
-> Logic : https://www.youtube.com/channel/UC0s7IzjaMMTbZTBk4c2Lzwg/videos
-> Code Walkthrough : 
-
-
-### Solution : ( ACCEPTED ) 
-> two call approach 
-
-```
 class Solution{  
 string maxStr = "";
 public:
@@ -46,4 +34,4 @@ public:
         return maxStr;
     }
 };
-```
+
