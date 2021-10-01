@@ -13,6 +13,7 @@ public:
     //You need to complete this function
     double cToF(int C)
     {
+        return ((C * 9.0 / 5.0) + 32.0);
         //Your code here
     }
 };
