@@ -32,7 +32,13 @@ class Solution
 public:
     int MissingNumber(vector<int> &array, int n)
     {
-        // Your code goes here
+       // Your code goes here
+        int i=0,sum=0,missing_num;
+        int sum_of_n=n*(n+1)/2;//sum of first n natural numbers
+        for(i=0;i<n-1;i++)
+            sum+=array[i];//sum of elements present in array.
+        missing_num=sum_of_n-sum;//missing element 
+        return missing_num;
     }
 };
 
