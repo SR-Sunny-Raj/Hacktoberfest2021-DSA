@@ -1,0 +1,54 @@
+class Solution {
+public:
+    string minWindow(string s, string t) 
+    {
+        unordered_map<char,int> m;
+        
+        for(char c : t)
+        {
+            m[c]++;
+        }
+        
+        int counter = t.size();
+        int start = 0;
+        int end = 0;
+        int len = INT_MAX;
+        int begin = 0;
+        "ADOBECODEBANC"
+        while(end < s.size())
+        {   
+            m[s[end]]--;
+           
+            if(m[s[end]] >= 0)
+            {
+                counter--;
+            }
+            end++;
+            
+            while(counter == 0)
+            {
+                if(end - start < len)
+                {
+                    len = end - start;
+                    begin = start;
+                }
+                
+                m[s[start]]++;
+                if(m[s[start]] > 0)
+                {
+                    counter++;
+                }
+                start++;
+            }
+        }
+        
+        if(len != INT_MAX)
+        {
+            return s.substr(begin,len);
+        }
+        else
+        {
+            return "";
+        } 
+    }  
+};
