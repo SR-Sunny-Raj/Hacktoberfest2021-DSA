@@ -28,6 +28,13 @@ class Solution
 public:
     int trailingZeroes(int N)
     {
+        int result = 0;
+        for(long long i=5; N/i>0; i*=5){
+             result += (N/i);
+         }
+        return result;
+        //Logic ---->
+        //The zeros come from 10 and factors of 10 are 2 and 5 .
         // Write Your Code here
     }
 };
