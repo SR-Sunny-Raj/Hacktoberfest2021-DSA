@@ -8,7 +8,7 @@ Output: {z, dol, du, dov}
 Explaination: 
 where we can see that
 zebra = z
-dog = dog
+doll = dol
 duck = du
 dove = dov
 
