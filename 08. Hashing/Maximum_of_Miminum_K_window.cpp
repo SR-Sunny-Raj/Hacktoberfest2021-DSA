@@ -1,5 +1,5 @@
-/* Maximum of Minima of all windows of size k */
-/*
+/* Maximum of Minima of all windows of size k 
+
     For a list of numbers,
     Find the maximum of minima of all windows of size k
 
