@@ -8,7 +8,16 @@ class Solution
 public:
     int setBits(int N)
     {
-        // Write Your Code here
+        int count = 0;
+
+        for (int i = 31; i >= 0; i--)
+        {
+            if (N & (1 << i))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 };
 
