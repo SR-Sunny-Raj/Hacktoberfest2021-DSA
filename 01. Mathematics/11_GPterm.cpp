@@ -13,7 +13,11 @@ public:
     //Complete this function
     double termOfGP(int A, int B, int N)
     {
-        //Your code here
+        //first finding ratio
+        double ratio = double(B)/double(A);
+        //Nth term according to the formula
+        double ans = A*(pow(ratio,N-1));
+        return ans;
     }
 };
 
