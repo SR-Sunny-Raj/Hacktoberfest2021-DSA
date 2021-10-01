@@ -36,6 +36,36 @@ public:
 	void frequencyCount(vector<int> &arr, int N, int P)
 	{
 		// code here
+		//if number of elements are less than 3 then return -1
+		if(N<3)
+		   cout<<"Invalid input"<<endl;
+		// Initialize first, second and third Largest element
+		int first = arr[0], second = INT_MIN, third = INT_MIN;
+		// Traverse array elements to find the third Largest
+                for (int i = 1; i < N ; i ++)
+                 {
+                       /* If current element is greater than first,
+                         then update first, second and third */
+                     if (arr[i] > first)
+                       {
+                          third  = second;
+                         second = first;
+                         first  = arr[i];
+                     }
+ 
+                /* If arr[i] is in between first and second */
+                    else if (arr[i] > second)
+                    {
+                    third = second;
+                    second = arr[i];
+                    }
+ 
+                  /* If arr[i] is in between second and third */
+                 else if (arr[i] > third)
+                 third = arr[i];
+            }
+ 
+	     cout<<"Third largest element is "<<third<<endl;
 	}
 };
 
