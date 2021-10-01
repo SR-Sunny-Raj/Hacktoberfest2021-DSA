@@ -1,3 +1,4 @@
+/*
 Problem Statement -: Given an unsorted array of integers, find the number of continuous subarrays having sum exactly equal to a given number k.
 Example 1:
 
@@ -28,6 +29,7 @@ Constraints:
 1 ≤ N ≤ 2*104
 -103 ≤ Arr[i] ≤ 103
 -107 ≤ k ≤ 107
+*/
 
 //Driver Code Starts
 #include <bits/stdc++.h>
