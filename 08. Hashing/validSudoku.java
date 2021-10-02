@@ -39,7 +39,7 @@
  * 
  * */    
 import java.util.*;
-class Solution {
+class validSudoku {
     public boolean isValidSudoku(char[][] board) {
         Set<String> set=new HashSet<>();
         String s="";
