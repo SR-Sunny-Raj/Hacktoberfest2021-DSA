@@ -1,7 +1,7 @@
-/* In this Input will be Postfix Expression on which particular operations will be 
+/* In this Input will be Prefix Expression on which particular operations will be 
 performed using stacks and output will be the result of that expression.
-Eg. Input => 4 6 + 2 / 5 * 7 +       Output => 32
-Evaluation =>((((4+6)/2)*5)+7) = 32
+Eg. Input => - + 7 * 4 5 + 2 0 Output => 25
+Evaluation =>((7+(4*5))-(2+0)) = 25
 */
 
 //code by Sanskruti Shahu
