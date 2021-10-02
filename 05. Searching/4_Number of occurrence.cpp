@@ -40,7 +40,16 @@ public:
 		of occurrences of x, otherwise returns 0. */
     int count(int arr[], int n, int x)
     {
-        // code here
+       int i;
+        int count = 0;
+        for(i=0;i<n;i++)
+        {
+            if(arr[i] == x)
+            {
+                count +=1;
+            }
+        }
+        return count;
     }
 };
 
