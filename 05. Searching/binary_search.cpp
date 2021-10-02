@@ -1,49 +1,59 @@
 #include <iostream>
 using namespace std;
+//iterative binary search
+int binarySearch(int A[], int low, int high, int x)
+	{  
+		while (low <= high)
+		{
+			// we find the mid value in the search space and
+			// compares it with key value
+
+			int mid = (low + high) / 2;
+
+			// overflow can happen. Use:
+			// int mid = low + (high - low) / 2;
+			// int mid = right - (high - low) / 2;
+
+			// key value is found
+			if (x == A[mid]) {
+				return mid;
+			}
+
+			// discard all elements in the right search space
+			// including the mid element
+			else if (x < A[mid]) {
+				high = mid - 1;
+			}
+
+			// discard all elements in the left search space
+			// including the mid element
+			else {
+				low = mid + 1;
+			}
+		}
+
+		// x doesn't exist in the array
+		return -1;
+	}
 int main()
 {
-    int i, j, k, temp, arr[10], num, beg, end, mid;
-    cout << "Please enter 10 numbers (with spaces between them): ";
-    for (i = 0; i < 10; i++)
+    int n,key,i;
+    cout<<"Enter size of array):"<<endl;
+    cin>>n;
+    int arr[n];
+    cout << "Please enter "<<n<<" numbers (with spaces between them): ";
+    for (i = 0; i < n; i++)
         cin >> arr[i];
-
-    for (i = 0; i < 10; i++)
-    {
-        for (j = i + 1; j < 10; j++)
-        {
-            if (arr[i] > arr[j])
-            {
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
-
-    for (i = 0; i < 10; i++)
-        cout << arr[i] << "\t";
-    cout << endl;
-
     cout << "\nEnter number for searching: ";
-    cin >> num;
-    beg = 0;
-    end = 9;
-    mid = (beg + end) / 2;
-    while (beg <= end)
-    {
-        if (arr[mid] < num)
-            beg = mid + 1;
-        else if (arr[mid] == num)
-        {
-            cout << "\nThe number, " << num << " was found at the position " << mid + 1;
-            break;
-        }
-        else
-            end = mid - 1;
-        mid = (beg + end) / 2;
+    cin >> key;
+    int low = 0;
+    int high= n - 1;
+    int index = binarySearch(arr, low, high, key);
+
+    if (index != -1) {
+       cout<<"Element found at index "<<index;
+    } else {
+        cout<<"Element not found in the array";
     }
-    if (beg > end)
-        cout << "\nThe number, " << num << " was not found ";
-    cout << endl;
     return 0;
 }
