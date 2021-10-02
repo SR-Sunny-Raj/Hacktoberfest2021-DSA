@@ -39,6 +39,15 @@ class Solution
 public:
     int trailingZeroes(int N)
     {
+        if(N<0) 
+         return -1;
+
+        int count = 0;
+        for(int i = 5;i >= 1;i*=5)
+        {
+            count+= N/i;
+        }
+        return count;
         // Write Your Code here
     }
 };
