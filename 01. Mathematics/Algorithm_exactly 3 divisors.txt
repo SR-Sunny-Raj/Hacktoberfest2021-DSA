@@ -1,0 +1,8 @@
+Algorithm:
+1.main calculation is to find those which are squares of prime numbers 
+and less than or equal to the number.
+2.Start a loop for integer i from 2 to n.
+3. Check if i is prime or not using the isPrime(n) function.
+4. If i is prime, check if its square is less than or equal to the given number. 
+This will be checked only for squares of prime numbers, therefore reducing the number of checks.
+5.If the above condition is satisfied, the number will be printed and the loop will continue till i<=n.
