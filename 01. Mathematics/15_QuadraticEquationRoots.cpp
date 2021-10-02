@@ -12,6 +12,32 @@ class Solution
 public:
     vector<int> quadraticRoots(int a, int b, int c)
     {
+        vector<int> ans;
+        if(a==0)
+        {
+            ans.push_back(-1);
+            return ans;
+        }
+        int d = b*b - 4*a*c;
+        double sqrt_val = sqrt(abs(d));
+        if(d>0)
+        {
+            double root1 = (double)(-b + sqrt_val)/(2*a);
+            double root2 = (double)(-b - sqrt_val)/(2*a);
+            ans.push_back(root1);
+            ans.push_back(root2);
+        }
+        else if(d==0)
+        {
+            double root = -(double)b/(2*a);
+            ans.push_back(root);
+            ans.push_back(root);
+        }
+        else
+        {
+            ans.push_back(-1);
+        }
+        return ans;
         // code here
     }
 };
