@@ -1,6 +1,6 @@
 # FENWICK TREES or BINARY INDEXED TREES
 
-To update and perform a range query in O(logN) which is certainly better than O(N)
+To update and perform a range query in `O(logN)` which is certainly better than `O(N)`
 
 ## Prerequisites 
 
@@ -25,18 +25,18 @@ So 1,2,4,8,16 have a parent 0.
 
 ## Advantages 
 - Complexity - O(number of set bits)
-- For length N, space needed - O(N) {whereas in segment tree it is 4xN}
+- For length N, space needed - O(N) (whereas in segment tree it is 4xN)
 - Code smaller in Length
 
 <br />
 
 ## Disadvantages 
-- It will not work for the functions whose inverse does not exist. So it will not work for the functions like max & min. However, add, mul, div, sub still works because of existence of inverse functions.
+- It will not work for the functions whose inverse does not exist. So it will not work for the functions like `max & min`. However, `add, mul, div, sub` still works because of existence of inverse functions.
 
 <br />
 
 ## Resources
 
-Watch Video Explanation <a href = "https://www.youtube.com/watch?v=DxN5-Y8Ld4c"> Click Here</a><br />
+- Watch Video Explanation <a href = "https://www.youtube.com/watch?v=DxN5-Y8Ld4c"> Click Here</a><br />
 
-Read Article <a href = "https://leetcode.com/discuss/general-discussion/1093346/Introduction-to-Fenwick-TreeBinary-Indexed-Tree(BIT)"> Click Here</a><br />
+- Read Article <a href = "https://leetcode.com/discuss/general-discussion/1093346/Introduction-to-Fenwick-TreeBinary-Indexed-Tree(BIT)"> Click Here</a><br />
