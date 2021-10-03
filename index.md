@@ -25,9 +25,9 @@
 
 Create a GitHub account, if you don't already have one. Need help? Here are some resources to help you set up your GitHub account:
 
-- https://ayushirawat.com/what-is-git-and-github-or-git-vs-github
-- https://www.youtube.com/playlist?list=PLjaO05BrsbIPUT76gpBmUxV7YSPWFephT
-- https://www.youtube.com/playlist?list=PLseEp7p6EwiZgLPknY4ITJxfoo75wqxph
+- [https://ayushirawat.com/what-is-git-and-github-or-git-vs-github](https://ayushirawat.com/what-is-git-and-github-or-git-vs-github)
+- [https://www.youtube.com/playlist?list=PLjaO05BrsbIPUT76gpBmUxV7YSPWFephT](https://www.youtube.com/playlist?list=PLjaO05BrsbIPUT76gpBmUxV7YSPWFephT)
+- [https://www.youtube.com/playlist?list=PLseEp7p6EwiZgLPknY4ITJxfoo75wqxph](https://www.youtube.com/playlist?list=PLseEp7p6EwiZgLPknY4ITJxfoo75wqxph)
 
 ### Step - 2:
 
@@ -41,8 +41,8 @@ You can add a language label of your choice to filter open issues. If you are a 
 
 Here's something beginner-friendly for you:
 
-- https://www.firsttimersonly.com/
-- https://github.com/mungell/awesome-for-beginners
+- [https://www.firsttimersonly.com/](https://www.firsttimersonly.com/)
+- [https://github.com/mungell/awesome-for-beginners](https://github.com/mungell/awesome-for-beginners)
 
 ### Step - 4:
 
