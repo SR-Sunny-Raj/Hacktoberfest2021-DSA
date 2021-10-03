@@ -13,7 +13,9 @@ public:
 	//Complete this function
 	int modInverse(int a, int m)
 	{
-		//Your code here
+		for (int x = 1; x < m; x++)
+        	if (((a%m) * (x%m)) % m == 1)
+            	return x;
 	}
 };
 
