@@ -46,3 +46,8 @@ int main(){
 
    return 0;
 }
+/*ouput-
+How many elements are u going to enter?: 5
+Enter 5 elements: 56 34 12 32 67
+Order of Sorted elements: 12 32 34 56 67
+*/

@@ -26,3 +26,4 @@ print("Sorted array is:")
 for i in range(n):
 	print("%d" % arr[i]),
 
+#output: Sorted array is: 1 5 7 8 9 10
