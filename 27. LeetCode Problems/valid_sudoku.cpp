@@ -1,35 +1,37 @@
-//Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-//Points to be kept in mind:
-//Each row must contain the digits 1-9 without repetition.
-//Each column must contain the digits 1-9 without repetition.
-//Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-
+//Problem Link -: https://leetcode.com/problems/valid-sudoku/
 
 class Solution {
 public:
-    bool isValidSudoku(vector<vector<char>>& board) {
-       
-        unordered_set<string> st;
-        
-        for(int i = 0; i<9; i++) {
-            for(int j = 0; j<9; j++) {
-                if(board[i][j] != '.') 
-                { 
-                string row = "r"+ to_string(i)+string(1,board[i][j]);
-                string col = "c"+ to_string(j)+string(1,board[i][j]);
-                string box = "b"+to_string(i/3)+ to_string(j/3)+string(1,board[i][j]);
-                if(st.find(row)!=st.end() ||
-                    st.find(col)!=st.end()||
-                    st.find(box)!=st.end())
+    bool isValidSudokuHelper(int i, int j, vector<vector<char>>board) {
+        int grp_num = 3 * (i / 3) + (j / 3);
+        for (int k = 0; k < 9; k++) {
+            if (board[i][j] == board[i][k] and j != k) {
                 return false;
-                st.insert(row);
-                st.insert(col);
-                st.insert(box);
-            }
             }
         }
-        
+        for (int k = 0; k < 9; k++) {
+            if (board[i][j] == board[k][j] and i != k) {
+                return false;
+            }
+        }
+        int new_i = 3 * (i / 3), new_j = 3 * (j / 3);
+        for (int k = new_i; k < new_i + 3; k++) {
+            for (int l = new_j; l < new_j + 3; l++) {
+                if (k != i and l != j and board[k][l] == board[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    bool isValidSudoku(vector<vector<char>>& board) {
+        for (int i = 0; i < board.size(); i++) {
+            for (int j = 0; j < board[0].size(); j++) {
+                if (board[i][j] != '.')
+                    if (isValidSudokuHelper(i, j, board) == false)
+                        return false;
+            }
+        }
         return true;
     }
 };
-
