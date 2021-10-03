@@ -48,6 +48,22 @@ public:
 
 	void rearrange(int arr[], int n) {
 	    // code here
+		 // Add 1 to last digit and find carry
+		arr[n-1]+=1;
+		int carry=arr[n-1]/10;
+		arr[n-1]=arr[n-1]%10;
+		 // Traverse from second last digit
+		for(int i=n-2;i>=0;i--){
+			if(carry==1){
+				arr[i]+=1;
+				carry=arr[i]/10;
+				arr[i]=arr[i]%10;
+			}
+		}
+		// If carry is 1, we need to add a 1 at the beginning of array
+		if(carry==1){
+			arr[0]=1;
+		}
 	}
 };
 
@@ -63,6 +79,7 @@ int main() {
         for (i = 0; i < n; i++) {
             cin >> arr[i];
 	}
+
         int carry = 0;
 	for(int i = n-1;i>=0;--i){
 		if(i==0&&carry==1){
