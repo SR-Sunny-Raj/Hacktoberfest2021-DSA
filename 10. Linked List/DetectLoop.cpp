@@ -26,12 +26,18 @@ void push(Node** head_ref, int new_data)
     (*head_ref) = new_node;
 }
  
-int detectLoop(Node* list)
+int detectLoop(Node* head)
 {
     Node *fast_pointer = head;
     Node *slow_pointer = head;
 
-  while(fast_pointer != NULL && slow_pointer != NULL)
+
+  /*
+    Check for null value for fast_pointer and fast_pointer->next
+    So to avoid segmentation fault error for case in which there
+    is no loop for both even and odd number of elements
+  */
+  while(fast_pointer && fast_pointer->next)
   {
     slow_pointer = slow_pointer->next;
     fast_pointer = fast_pointer->next->next;
@@ -53,10 +59,11 @@ int main()
     push(&head, 20);
     push(&head, 4);
     push(&head, 15);
+    push(&head, 15);
     push(&head, 10);
  
     /* Create a loop for testing */
-    head->next->next->next->next = head;
+    head->next->next->next = head;
     if (detectLoop(head))
         cout << "Loop found";
     else
