@@ -1,4 +1,5 @@
 //Problem statement URL:- https://practice.geeksforgeeks.org/problems/union-of-two-arrays3538/1/?track=DSASP-Hashing&batchId=154
+//Hashing approach
 
 class Solution{
     public:
