@@ -4,7 +4,7 @@
  
 #define N 15
  
-// Merge two sorted subarrays `arr[low … mid]` and `arr[mid+1 … high]`
+// Merge two sorted subarrays `arr[low â€¦ mid]` and `arr[mid+1 â€¦ high]`
 void Merge(int arr[], int aux[], int low, int mid, int high)
 {
     int k = low, i = low, j = mid + 1;
@@ -33,7 +33,7 @@ void Merge(int arr[], int aux[], int low, int mid, int high)
     }
 }
  
-// Sort array `arr[low…high]` using auxiliary array `aux`
+// Sort array `arr[lowâ€¦high]` using auxiliary array `aux`
 void mergesort(int arr[], int aux[], int low, int high)
 {
     // Base case
