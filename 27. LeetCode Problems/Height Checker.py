@@ -1,6 +1,6 @@
 # /*
 #     Problem Link
-#     https://leetcode.com/problems/find-the-highest-altitude/
+#     https://leetcode.com/problems/height-checker/
 # */
 
 def heightChecker(heights):
