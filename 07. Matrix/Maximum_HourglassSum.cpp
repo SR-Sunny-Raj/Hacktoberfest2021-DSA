@@ -14,7 +14,7 @@ An hourglass in  is a subset of values with indices falling in this pattern in '
 a b c
   d
 e f g
-There are  hourglasses in . An hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in , then print the maximum hourglass sum. The array will always be .
+There are  hourglasses in . An hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in , then print the maximum hourglass sum.
 
 Example
 
