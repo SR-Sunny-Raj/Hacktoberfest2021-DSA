@@ -19,5 +19,6 @@ int main()
         if (maxp < imax)
             maxp = imax;
     }
-    return maxp;
+    cout<< maxp;
+    return 0;
 }
