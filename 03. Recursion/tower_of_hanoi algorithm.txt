@@ -1,16 +1,52 @@
-Tower of Hanoi
-#include <stdio.h>
-void TOH(int n,int A,int B,int C)
-{
-if(n>0)
-{
-TOH(n-1,A,C,B);
-printf("(%d,%d)\n",A,C);
-TOH(n-1,B,A,C);
+//Tower of Hanoi
+#include<bits/stdc++.h>
+using namespace std;
+void currState(map<char,stack<int>> m)	{
+	cout<<"\n";
+	for(auto i=m.begin();i!=m.end();i++)	{
+		cout<<i->first<<" : ";
+		while(!(i->second).empty())	{
+			cout<<i->second.top()<<" ";
+			i->second.pop();
+		}
+		cout<<"\n";
+	}
 }
+void towerOfHanoi(int n,char ini,char final,char inter,map<char,stack<int>> &m)	{
+	if(n==1)	{
+		m[final].push(m[ini].top());
+		m[ini].pop();
+		currState(m);
+		return;
+	}
+	towerOfHanoi(n-1,ini,inter,final,m);
+	m[final].push(m[ini].top());
+	m[ini].pop();
+	currState(m);
+	towerOfHanoi(n-1,inter,final,ini,m);
 }
-int main()
-{
-TOH(4,1,2,3);
-return 0;
+int main()	{
+	int n;
+	char ini,final,inter;
+	stack<int> a,b,c;
+	map<char,stack<int>> m;
+	cout<<"Enter number of disks : ";
+	cin>>n;
+	cout<<"Enter initial position of disks (A, B or C) : ";
+	cin>>ini;
+	cout<<"Enter final position of disks (A, B or C) : ";
+	cin>>final;
+	for(int i=n;i>0;i--)
+		m[ini].push(i);
+	if((ini!='A'||ini!='a')&&(final!='A'||final!='a'))
+		inter='A';
+	if((ini!='B'||ini!='b')&&(final!='B'||final!='b'))
+		inter='B';
+	if((ini!='C'||ini!='c')&&(final!='C'||final!='c'))
+		inter='C';
+    if(ini==final)
+        cout<<"Already in Final State.\n";
+    else
+	   towerOfHanoi(n,ini,final,inter,m);
+	return 0;
 }
