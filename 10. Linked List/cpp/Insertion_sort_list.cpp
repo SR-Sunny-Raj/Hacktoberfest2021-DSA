@@ -47,7 +47,7 @@ public:
             node->next = head;
             return node;
         }
-        ListNode *current = head;
+        ListNode *curr = head;
         while(curr->next) {
             if(curr->next->val >= node->val) {
                 node->next = curr->next;
