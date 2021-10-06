@@ -1,0 +1,23 @@
+#include <iostream>
+#include<climits>
+
+using namespace std;
+
+int main(){
+    int n , maxi = 0 ;
+    cin>> n ; 
+    int a[n] ; 
+    for (int i = 0; i < n; i++)
+    {
+        /* code */
+        cin>>a[i] ; 
+    }
+    for (int i = 0; i < n; i++)
+    {
+        /* code */
+        maxi = max(maxi,a[i]) ; 
+        
+    }
+    
+    cout<< maxi ; 
+}
