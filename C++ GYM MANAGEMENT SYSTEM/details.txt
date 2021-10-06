@@ -1,0 +1,7 @@
+Important details to run this code :
+
+1)  The default admin username is     "   supreme_power  "
+2)  The default admin password is     "   give_access    "
+3)  admin name and password can only be changed by chaning them in the c++ code
+
+Thank You 
