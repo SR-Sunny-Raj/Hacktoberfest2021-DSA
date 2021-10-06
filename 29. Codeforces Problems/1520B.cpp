@@ -22,7 +22,7 @@ units place : 10^0
 tens place : 10^1
 hundreds place : 10^2 and so on;
 Here we observe a pattern that any ordinary number in the form (nnnnnn..) having say m digits
-can be written as n(10^0+10^1+10^2+........10^m)
+can be written as n*(10^0+10^1+10^2+........10^m)
 for every (n,m) pair this relation gives a unique number. We can brute force every possible (n,m) pair
 till n(10^0+10^1+10^2+........10^m) exceeds the given number. 
 contributed by Sameer Trivedi */
