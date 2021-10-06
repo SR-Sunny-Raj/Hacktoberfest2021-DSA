@@ -1,0 +1,49 @@
+#include <iostream>
+#include<climits>
+
+using namespace std;
+
+int main(){
+    int n ; 
+    cin>>n ; 
+
+    int a[n+1] ; 
+     a[n] = -1 ; 
+
+    for (int i = 0; i < n; i++)
+    {
+        /* code */
+        cin>>a[i] ;   
+    }
+    if (n==1){
+        cout<<"1"<<endl ; 
+        return 0 ; 
+    }
+    int ans = 0  ;
+    int mx =a[0] ; 
+    for (int i = 1; i < n; i++)
+    {
+        /* code */
+        if (a[i]>mx )
+        {
+            /* code */
+            ans++ ; 
+        }
+        mx = max(mx , a[i]) ; 
+
+    }
+     int mini = a[0] , mincouter = 0; 
+     
+     for (int i = 1; i < n; i++)
+     {
+         if (a[i]<mini)
+             {
+                 /* code */
+                 mincouter++ ; 
+             }
+             mini =min(mini , a[i]) ; 
+         
+     }
+     cout<<ans<<" "<<mincouter ; 
+
+}
