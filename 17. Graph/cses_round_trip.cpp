@@ -1,4 +1,20 @@
 //Problem link : https://cses.fi/problemset/result/2892036/
+/*
+Byteland has n cities and m roads between them. Your task is to design a round trip that begins in a city, 
+goes through two or more other cities, and finally returns to the starting city.
+Every intermediate city on the route has to be distinct. If there are multiple solutions print any.
+Input:
+5 6
+1 3
+1 2
+5 3
+1 5
+2 4
+4 5
+output:
+4
+3 5 1 3
+*/
 
 #include <bits/stdc++.h>
 #define ll long long
