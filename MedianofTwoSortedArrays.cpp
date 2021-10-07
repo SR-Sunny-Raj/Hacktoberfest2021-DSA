@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2){
         if(nums1.size()>nums2.size())
             return findMedianSortedArrays(nums2,nums1);
@@ -28,3 +31,22 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2){
         }
         return 0; 
     }
+
+int main()
+{
+        vector<int> nums1,nums2;
+        nums1.push_back(2);
+        nums1.push_back(3);
+        nums1.push_back(4);
+        nums1.push_back(7);
+        nums1.push_back(9);
+        nums2.push_back(2);
+        nums2.push_back(5);
+        nums2.push_back(6);
+        nums2.push_back(7);
+        nums2.push_back(10);
+        nums2.push_back(11);
+        nums2.push_back(12);
+        cout<<findMedianSortedArrays(nums1,nums2);
+        return 0;
+}
