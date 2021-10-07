@@ -1,6 +1,7 @@
 Problem Statement:-
 //https://codeforces.com/contest/1572/problem/C//
-Solution to the codeWould be as follows:
+The Solution to this Problem could be done using Greedy approach along with DP.
+Code:-
 
 #include <bits/stdc++.h>
 using namespace std;
