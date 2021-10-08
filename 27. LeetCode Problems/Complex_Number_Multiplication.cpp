@@ -14,7 +14,7 @@ class Solution {
 public:
     string complexNumberMultiply(string num1, string num2) {
         return multiply(number(num1),number(num2));
-        
+
     }
     pair<int,int> number(string s)
     {
@@ -40,7 +40,7 @@ int main()
   cout<<"\nEnter 2nd complex no. ";
   getline(cin,num2);
   cout<<endl;
-  
+
   Solution ans;
   cout<<ans.complexNumberMultiply(num1,num2)<<endl;
   return 0;
