@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        //vector will store the char and the last index it appeared
+        vector <int> mpp(256,-1);//Total 256 ASCII characters are taken
+        int left = 0, right = 0, len = 0;
+        int n = s.size();
+        while(right < n) //while our pointer has not reached the end of the string
+        {
+            if(mpp[s[right]] != -1) left = max(mpp[s[right]] + 1, left);//if s[right] char already exists in the vec
+            //left is only updates if the place is already ahead of the previous range
+            mpp[s[right]]= right; //updating the index
+            len = max(len, right - left + 1);//updating the new range if maximum than prev len
+            right++;
+        }
+                return len; //return the final len
+    }
+};
+
+//https://leetcode.com/problems/longest-substring-without-repeating-characters/
