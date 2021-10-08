@@ -4,6 +4,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+  background-image : linear-gradient(to right, #00000066, #00000066),url("foodrecipie.jpg");
+  height: 100vh;
+}
 .title{
     color: #f3f8f7;
 }
@@ -24,7 +28,6 @@ section{
     align-items: center;
     display: flex;
     padding: 100px 0;
-    background-color: rgb(17, 12, 12);
 }
 .container {
     width: 100%;
@@ -36,20 +39,76 @@ section{
   .brand {
     text-align: center;
     font-size: 4rem;
-    color: whitesmoke;
     margin-bottom: 30px;
   }
+  .gradient-text {
+
+  background-color: #CA4246;
+  
+   background-image: linear-gradient(
+        45deg,
+        #CA4246 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+   animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
   form {
     width: 90%;
     max-width: 400px;
     margin: 20px auto;
     background-color: rgb(223, 223, 223);
+    border: none;
+    border-radius: 80px;
   }
   input {
     width: 90%;
     padding: 10px;
-    border-radius: 4px;
     border: none;
+    border-radius: 60px;
     outline: none;
     font-size: 2rem;
     background-color: rgb(223, 223, 223);
@@ -61,6 +120,11 @@ section{
     margin-bottom: -8px;
     color: rgb(75, 75, 75);
     display: inline-block;
+  }
+  ion-icon:hover{
+    color: blue;
+    font-size: 3.2rem;
+
   }
   .search-result {
     margin-top: 50px;
