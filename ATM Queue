@@ -1,0 +1,43 @@
+// https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068cca3
+
+// Read input Google kick start
+const fs = require("fs");
+const input = fs.readFileSync(0, "utf8").trim().split("\n");
+
+let currentline = 0;
+
+function readline() {
+    return input[currentline++];
+}
+
+// T
+// N K
+// ABCABCABC  // arr [Ai]
+
+let T = readline();
+
+for (let i = 1; i <= T; i++) {
+    let [N, K] = readline().split(" ");
+    let arr = readline().split("");
+    console.log("Case #" + i + ": " + solve(K, arr));
+}
+
+
+// solutation 
+//-----------
+
+function solve(K, arr) {
+    var output = "";
+    var i;
+    K = Number(K);
+    var gns = 0;
+    var n = parseInt(arr.length/2);
+    
+    for (i = 1; i <= n; i++) {
+        var j = arr.length - i + 1;
+        if(arr[i-1] != arr[j-1])
+            gns++;
+    }
+
+    return Math.abs(K - gns);
+}
