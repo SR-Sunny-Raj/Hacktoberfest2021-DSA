@@ -1,0 +1,13 @@
+L=int(input())
+B=int(input())
+peri=2*(L+B)
+Area=L*B
+if(Area>peri):
+    print("Area")
+    print(Area)
+elif(peri>Area):
+    print("Peri")
+    print(peri)
+else:
+    print("Eq")
+    print(Area)
