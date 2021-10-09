@@ -8,6 +8,6 @@ def isPalindrome(inputString):
 s = input("Enter a string: ")
 result = isPalindrome(s)
 if result == 1:
-    print("The string is palindrome")
+    print("The string which you gave is palindrome")
 else:
-    print("The string is not palindrome")
+    print("The string which gave is not palindrome")
