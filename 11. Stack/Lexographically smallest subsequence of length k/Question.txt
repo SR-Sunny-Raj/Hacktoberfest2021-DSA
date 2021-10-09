@@ -1,0 +1,9 @@
+Q) You are given an array of integers arr, and an integer k. You have to output the lexographically smallest 
+subsequence of arr of length 'k'
+
+for eg-
+arr[] = [3,1,5,2,5,9,4]
+k= 4
+
+output:
+1254
