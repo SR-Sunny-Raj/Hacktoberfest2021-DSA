@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+  
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "/Users/raj/Desktop/OpenSource/Hacktoberfest2021-DSA/07. Matrix",
+      "environment": [],
+      "program": "/Users/raj/Desktop/OpenSource/Hacktoberfest2021-DSA/07. Matrix/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/lldb",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
