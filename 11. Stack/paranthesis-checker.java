@@ -13,7 +13,6 @@ public class BalancedParentheses {
                 (a=='{' && b=='}')||
                 (a=='[' && b==']') );
     }
-
     public static boolean isBalanced(String str){
         ArrayDeque<Character> s = new ArrayDeque<>();
         for (int i = 0; i < str.length(); i++) {
