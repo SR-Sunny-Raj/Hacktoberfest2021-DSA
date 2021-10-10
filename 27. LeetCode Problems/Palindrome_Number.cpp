@@ -1,17 +1,17 @@
-//An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
 class Solution {
 public:
     bool isPalindrome(int x) {
-        stringstream ss;  
-        ss<<x;  
-        string s;  
-        ss>>s; 
-        for(int i=0,j=s.length()-1; i<=j; i++,j--)
-            if(s[i] != s[j])
-                return false;
-        return true;
+        long int num=0,n=x;
+        if (x<0 || (x!=0 && x%10==0)){
+            return false;
+        }
+        else{
+            while(n!=0){
+                num=num*10+n%10;
+                n=n/10;
+            }
+            return (x==num)?true:false;
+        }
+        
     }
 };
-
- 
- 
