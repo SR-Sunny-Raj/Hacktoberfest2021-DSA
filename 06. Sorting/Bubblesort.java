@@ -1,8 +1,6 @@
-
-//Code for Bubble sort algorithm in Java
 import java.io.*;
-
-class Bubblesort {
+import java.util.*;
+class BubbleSort{
     
     static void bubbleSort(int arr[], int n){
         for(int i = 0; i < n; i++){
@@ -19,12 +17,20 @@ class Bubblesort {
         }
     }
     
-	public static void main (String[] args) {
-	    int a[] = {2, 1, 4, 3};
-	    bubbleSort(a, 4);
-	    
-	    for(int i = 0; i < 4; i++){
-	        System.out.print(a[i] + " ");
-	    }
-	}
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n;
+        System.out.println("Enter size of array");
+        n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        
+        bubbleSort(a, n);
+        
+        for(int i = 0; i < n; i++){
+            System.out.print(a[i] + " ");
+        }
+    }
 }
