@@ -1,0 +1,64 @@
+We need to check whether given Graph is Bipartite or Not
+
+Code:
+
+class Solution {
+public:
+    bool check(int i,vector<int>&color,vector<vector<int>>& graph)
+    {
+         queue<int>q;
+         q.push(i);
+         color[i]=0;
+        while(!q.empty())
+        {
+            int x=q.front();
+            q.pop();
+            for(int i=0;i<graph[x].size();i++)
+            {
+                int y=graph[x][i];
+                if(color[y]==-1)
+                {
+                    q.push(y);
+                    if(color[x]==0)
+                    {
+                        color[y]=1;
+                    }
+                    else
+                    {
+                        color[y]=0;
+                    }
+                }
+                else
+                {
+                    //checking whether the colors are same 
+                    int color1=color[x];
+                    int color2=color[y];
+                    if(color1==color2)
+                    {
+                        return false;
+                    }
+                }
+            }
+            
+        }
+        return true;
+    }
+    bool isBipartite(vector<vector<int>>& graph)
+    {  
+        int size=graph.size();
+     vector<int> color(size,-1);
+        //0   1
+         for(int i=0;i<graph.size();i++)
+        {
+            if(graph[i].size()>0 and color[i]==-1)
+            {
+                  if(check(i,color,graph)==false)
+                  {
+                      return false;
+                  }
+            }
+        }
+        return true;
+        
+    }
+};
