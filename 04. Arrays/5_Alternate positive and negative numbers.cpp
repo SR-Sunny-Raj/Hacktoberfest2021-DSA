@@ -44,14 +44,14 @@ public:
 
 	void rearrange(int arr[], int n) {
 	    // code here
-		int temp_arr[n],j=-1,k=-2;
-		for(int i=0;i<n;i++){
+		int temp_arr[n],j=-1,k=-2,i;
+		for(i=0;i<n;i++){
 		    if(arr[i]<0){
 			j+=2;
 			temp_arr[j]=arr[i];
 		    }
 		}
-		for(int i=0;i<n;i++){
+		for(i=0;i<n;i++){
 		    if(k>j && arr[i]>=0){
 			k++;
 			temp_arr[k]=arr[i];
@@ -61,7 +61,7 @@ public:
 			temp_arr[k]=arr[i];
 		    }
 		}
-		for(int i=0;i<n;i++){
+		for(i=0;i<n;i++){
 		arr[i]=temp_arr[i];
 		}
 	}
