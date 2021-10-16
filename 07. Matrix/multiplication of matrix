@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    int row1,column1;
+   
+    printf("enter no of row in matrix:");
+    scanf("%d",&row1);
+    printf("enter no of column in matrix:");
+    scanf("%d",&column1);
+    int mat1[row1][column1];
+    int i,j;
+    for(i=0;i<row1;i++){
+        for(j=0;j<column1;j++){
+            printf("enter element at index mat1[%d][%d]",i,j);
+            scanf("%d",&mat1[i][j]);
+        }
+    }
+    
+    int row2,column2;
+    
+    printf("enter no of row in matrix:");
+    scanf("%d",&row2);
+    printf("enter no of column in matrix:");
+    scanf("%d",&column2);
+    int mat2[row2][column2];
+    int l,n;
+    for(l=0;l<row2;l++){
+        for(n=0;n<column2;n++){
+            printf("enter element at index mat1[%d][%d]",l,n);
+            scanf("%d",&mat2[l][n]);
+        }
+    }
+int o,p,k,sum,product[row1][column2];
+for(o=0;o<row1;o++){
+    for(p=0;p<column2;p++){
+        for(k=0;k<row2;k++){
+            sum+=mat1[o][k]*mat2[k][p];
+        }
+        product[o][p]=sum;
+        sum=0;
+    }
+}
+for(o=0;o<row1;o++){
+    for(p=0;p<column2;p++){
+        printf(" %d ",product[o][p]);
+    }
+    printf("\n");
+    
+}    
+    
+  
+    
+    return 0;
+}
+
+
