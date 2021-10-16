@@ -1,0 +1,12 @@
+class Solution:
+    # def findMedianSortedArrays(self, nan: List[int], nan2: List[int]) -> float:
+    def findMedianSortedArrays(self, nan: List[int], nan2: List[int]) -> float:
+        nan.extend(nan2)
+        nan.sort()
+        length = len(nan)
+        median = math.floor(length / 2.0)
+        if length % 2 != 0:
+            return nan[median]
+        else:
+            median_value = (nan[median] + nan[median-1]) / 2.0
+            return median_value     
