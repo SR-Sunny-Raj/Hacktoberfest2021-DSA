@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+void r_rotate(int a[],int n){
+    int i,k;
+    k=a[n-1];
+    for(i=n-1;i>0;i--){
+        a[i]=a[i-1];
+    }
+    a[0]=k;
+    
+}
+void l_rotate(int a[],int n){
+    int i,k;
+    k=a[0];
+    for(i=0;i<n-1;i++){
+        a[i]=a[i+1];
+    }
+    a[n-1]=k;
+}
+
+int main()
+{
+    int n,i;
+    cout<<"Enter n "<<endl;
+    cin>>n;
+    int a[n];
+    cout<<"enter array elements"<<endl;
+    for(i=0;i<n;i++){
+        cin>>a[i];
+    }
+    r_rotate(a,n);
+    cout<<"right rotation- \n";
+    for(i=0;i<n;i++){
+        cout<<a[i]<<' ';
+    }
+    cout<<endl;
+    l_rotate(a,n);
+    cout<<"left rotation- \n";
+    for(i=0;i<n;i++){
+        cout<<a[i]<<' ';
+    }
+
+    return 0;
+}
