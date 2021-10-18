@@ -1,0 +1,27 @@
+string Solution::solve(string A) {
+    
+    string B="";
+    long long n=A.length();
+    map<char,long long > m;
+    queue<char> s;
+    for(long long i=0;i<n;i++){
+        m[A[i]]++;
+        char c=s.front();
+        while(m[c]>1){
+            s.pop();
+            c=s.front();
+        }
+        if(m[A[i]]==1) s.push(A[i]);
+        if(s.empty()){
+            B+="#";
+        }
+        else{
+            char c=s.front();
+            B+=c;
+        }
+        
+    }
+    return B;
+    
+    
+}
