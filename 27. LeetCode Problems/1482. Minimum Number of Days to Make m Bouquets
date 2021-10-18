@@ -1,0 +1,47 @@
+class Solution {
+public:
+    bool isValid(vector<int> a, int m, int k, int mid)
+    {
+        int n=a.size();
+        int bouq=0;
+        int flow=0;
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]<=mid)
+                flow++;
+            else 
+            {
+                flow=0;
+            }
+            if(flow>=k)
+            {
+                bouq++;
+                flow=0;
+            }
+        }
+        if(bouq>=m)
+            return true;
+        else
+            return false;
+    }
+    int minDays(vector<int>& bloomDay, int m, int k) {
+        int n=bloomDay.size();
+        if(n<k*m)
+            return -1;
+        int low=1;
+        int high=1e9;
+        int ans=-1;
+        while(low<=high)
+        {
+            int mid=low+((high-low)>>1);
+            if(isValid(bloomDay,m,k,mid))
+            {
+                ans=mid;
+                high=mid-1;
+            }
+            else
+                low=mid+1;
+        }
+        return ans;
+    }
+};
