@@ -145,7 +145,7 @@ For your PR to count it must be:
   <img align="left" alt="Sunny's LinkdeIn" width="3%" style="margin:10px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>  
     
-<a href="https://instagram.com/___sunny___raj__">
+<a href="https://instagram.com/___sunny___raj___">
   <img align="left" alt="Sunny's Instagram" width="3%" style="margin:10px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
 </a>
     
