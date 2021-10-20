@@ -1,14 +1,39 @@
+import qrcode
+from tkinter import*
+from tkinter import PhotoImage
 
-# Run "pip install pyqrcode" or "pip3 install pyqrcode" before running this program
-import pyqrcode
+def generate():
+    #Getting url from url variable
+    url_qrcode = url.get()
 
-data = input("Enter the text or link to generate QR code: ")
+    #Generating qrcode
+    generated_url_qrcode = qrcode.make(url)
 
-# Using pyqrcode.create() to create a qr code of the input data 
-qr = pyqrcode.create(data)
+    #Saving qrcode
+    generated_url_qrcode.save("qrcode.png")
 
-# Using .svg method to save the qr code as SVG file of provided name & scale 
-qr.svg('qr_code.svg', scale = 8)
+    #Making new window for displaying generated qrcode
+    new = Toplevel(root)
+    img = PhotoImage(file="qrcode.png")
+    label = Label(new,image=img)
+    label.pack(pady=10)
 
-# Run "python3 <filename.py>" to execute the program
-# The program will generate a QR code of the input in the same directory
+    new.mainloop()
+
+#Initializing Tk
+root =  Tk()
+root.geometry("300x180")
+
+#Variable to store url enter by user
+url = StringVar()
+
+Label(text="Paste your url here").pack(pady=20)
+
+#Entry widget for taking url input and store it into url variable
+url_entry = Entry(textvariable=url)
+url_entry.pack()
+
+#Button for calling generate function
+Button(text="Generate",command=generate).pack(pady=15)
+
+root.mainloop()
