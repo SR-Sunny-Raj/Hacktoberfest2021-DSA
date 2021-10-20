@@ -6,9 +6,14 @@ using namespace std;
 class Solution
 {
 public:
-    int setBits(int N)
+    int setBits(int n)
     {
-        // Write Your Code here
+        unsigned int count = 0;
+    while (n) {
+        count += n & 1;
+        n >>= 1;
+    }
+    return count;
     }
 };
 
