@@ -1,0 +1,57 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+.game_wrapper{
+    background-color: white;
+    border: 5px solid black;
+    margin: auto;
+    height: 600px;
+    width: 600px; 
+}
+
+.game_box{
+    display: grid;
+    grid-template-rows:repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+}
+
+.box{
+    border: 1px solid black;
+    height:148px;
+    width:148px;
+}
+
+.hideColor{
+     background-color: rgba(0, 0, 0, 0.432) !important; 
+}   
+
+.timer{
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+
+.start_btn
+{
+    margin-top: 3rem;
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:rgb(112, 86, 226);
+    border-radius: 5px;
+    border:0;
+    color: white;
+} 
+
+.start_btn:hover{
+    box-shadow: 3px 5px 12px 2px rgba(88, 57, 228, 0.534);
+}
+
+.start_btn:active{
+    background-color: rgb(92, 73, 177);
+}
