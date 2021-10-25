@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - all possible combination generator</title>
+</head>
+<style>
+    .app,
+    #result {
+        padding: 10px;
+        margin: 12px;
+        font-family: roboto;
+        font-size: 16px
+    }
+
+    .app input {
+        font-family: roboto;
+        font-size: 16px;
+        padding: 8px 14px;
+        margin: 4px;
+        min-width: 228px
+    }
+</style>
+
+<body>
+    <div class="app">
+        <input id="qNum" type="number" placeholder="Number of Questions">
+        <br>
+        <input id="oNum" type="number" placeholder="Number of Options / Choices">
+        <br>
+        <input type="button" onclick="run();" value="Generate Combinations">
+    </div>
+
+
+    <div id="result">
+
+    </div>
+</body>
+<script>
+    
+    var ques, opts, totalComb;
+    var quesColOptList = [];
+    var combList = [];
+
+    function run() {
+        result.innerHTML = "";
+        ques = qNum.value;
+        opts = oNum.value;
+        totalComb = Math.pow(opts, ques);
+        result.innerHTML += "<b>There are " + opts + "<sup>" + ques + "</sup> = " + totalComb + " possible combinations are available.<br></br>";
+        getAllCombinations(ques, opts);
+    }
+
+    function getAllCombinations(ques, opts) {
+        // ques cols wise list for all combination
+        for (var q = 0; q < ques; q++) {
+            quesColOptList[q] = [];
+
+            var c = 0,
+                o = 1,
+                r = 0;
+            var repeat = Math.pow(opts, q);
+
+            while (c < totalComb) {
+                r++;
+                if (r > repeat) {
+                    if (o < opts) {
+                        o++;
+                    } else {
+                        o = 1;
+                    }
+                    r = 1;
+                }
+
+                var abcOpt = (9 + o).toString(36);
+                quesColOptList[q][c] = abcOpt;
+
+                c++;
+            } // end while
+        } // end outer loop
+
+        printResult();
+    }
+
+    function printResult() {
+        var combHTML = "<div style='font-size:18px; font-family:roboto; letter-spacing: 12px; line-height:2'>";
+
+        for (var c = 0; c < totalComb; c++) {
+            combList[c] = [];
+            combHTML += " <br> <span style='letter-spacing:1px;'>Combination " + (c + 1) + "</span> : ";
+            for (var q = 0; q < ques; q++) {
+                combList[c][q] = quesColOptList[q][c];
+                combHTML += " " + combList[c][q] + ",";
+            }
+        }
+
+        result.innerHTML += combHTML + "</div>";
+    }
+
+
+    // Alternative Solutation for possible combination generator
+    //-----------------------------------------------------------
+
+    // function binaryfun(no,base){
+    
+    //     var rem=0, result="",val=['A','B','C','D','E'];
+                            
+    //         if(no==0)
+    //             {
+    //                 result=result+val[0];
+    //             }
+    //         while (no>0) {
+    //             rem=no%base;
+    //             no=Math.floor(no/base);
+    //             result=result+val[rem];
+                
+    //         }
+
+    //         for (var i=result.length;i<QuestionCount;i++) {
+    //             //alert(result.length);
+    //                 result=result+val[0];
+    //                 //alert(result);
+    //             }
+    //             var splitstr = result.split("");
+    //         var revstr = splitstr.reverse();
+    //         var joinstr = revstr.join();
+            
+            
+    //         return joinstr;
+            
+    // }
+    
+    // var QuestionCount=prompt("Enter No of Question ",0);
+    // var base= prompt("Enter no of Option per Questoin(MAX 5) ",0);
+    
+    // var i,totalno;
+    // totalno = Math.pow(base,QuestionCount);
+    // var show= document.getElementById("showdata");
+    // show.innerHTML=show.innerHTML+'Total Combatation : '+ totalno+'<br/><br/>';
+    // for (i=0;i<totalno;i++)
+    //     {
+            
+    //         show.innerHTML=show.innerHTML+binaryfun(i,base)+"<BR/>";
+    //     }
+    
+    
+</script>
+
+</html>
