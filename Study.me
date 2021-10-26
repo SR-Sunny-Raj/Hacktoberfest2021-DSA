@@ -1,0 +1,108 @@
+C++ Program to implement Merge Sort using divide and conquer Algorithm
+Merge sort is a sorting algorithm for sorting elements of array in either ascending or descending order. Conceptually, a merge sort works as follows:
+a) Divide the unsorted list into n sub lists, each containing 1 element(a list of 1 element is considered sorted).
+
+b) Repeatedly merge sub lists to produce new sorted sub lists until there is only 1 sub list remaining. This will be the sorted list.
+
+Here is the source code of the C++ Program to implement Merge Sort using Divide and Conquer Algorithm. This C++ program is successfully compiled and run on Codeblocks. The program output is also shown below.
+
+SOURCE CODE : :
+/*  C++ Program to implement Merge Sorting using Divide and Conquer Algorithm  */
+
+#include <iostream>
+using namespace std;
+
+int a[100];
+void merge(int,int,int);
+void merge_sort(int low,int high)
+{
+ int mid;
+ if(low<high)
+ {
+  mid=(low+high)/2;
+  merge_sort(low,mid);
+  merge_sort(mid+1,high);
+  merge(low,mid,high);
+ }
+}
+void merge(int low,int mid,int high)
+{
+ int h,i,j,b[100],k;
+ h=low;
+ i=low;
+ j=mid+1;
+
+ while((h<=mid)&&(j<=high))
+ {
+  if(a[h]<=a[j])
+  {
+   b[i]=a[h];
+   h++;
+  }
+  else
+  {
+   b[i]=a[j];
+   j++;
+  }
+  i++;
+ }
+ if(h>mid)
+ {
+  for(k=j;k<=high;k++)
+  {
+   b[i]=a[k];
+   i++;
+  }
+ }
+ else
+ {
+  for(k=h;k<=mid;k++)
+  {
+   b[i]=a[k];
+   i++;
+  }
+ }
+ for(k=low;k<=high;k++) a[k]=b[k];
+}
+int main()
+{
+ int num,i;
+
+ cout<<"Enter no.of elements you want to sort:";
+ cin>>num;
+
+ cout<<"Enter "<< num <<" Elements : "<<endl;
+
+ for(i=1;i<=num;i++)
+ {
+  cout<<i<<" Element : ";
+  cin>>a[i] ;
+ }
+ merge_sort(1,num);
+ cout<<endl;
+ cout<<"After Merge Sort, Sorted Array is :"<<endl;
+
+ for(i=1;i<=num;i++)
+ {
+      cout<<a[i]<<" ";
+ }
+
+ cout<<endl;
+
+return 0;
+}
+OUTPUT : :
+/*  C++ Program to implement Merge Sort using Divide and Conquer Algorithm  */
+
+Enter no.of elements you want to sort: 6
+
+Enter 6 Elements :
+1 Element : 5
+2 Element : 2
+3 Element : 7
+4 Element : 1
+5 Element : 0
+6 Element : 9
+
+After Merge Sort, Sorted Array is :
+0       1       2       5       7       9
