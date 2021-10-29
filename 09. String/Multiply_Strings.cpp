@@ -16,9 +16,9 @@ public:
         }
         
         string s = "";
-        for(int i=0; i<(m+n); i++){
-            if(s.length() != 0 || ans[i] != 0){
-                s += (ans[i] + '0');
+        for(int j=0; j<(m+n); j++){
+            if(s.length() != 0 || ans[j] != 0){
+                s += (ans[j] + '0');
             }
         }
         
