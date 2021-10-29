@@ -46,11 +46,11 @@ using namespace std;
 
 char findTheDifference(string s, string t) {
   int count[26] = {0};
-  for (auto x : t) {
-    count[x - 'a']++;
+  for (auto y : t) {
+    count[y - 'a']++;
   }
-  for (auto x : s) {
-    count[x - 'a']--;
+  for (auto y : s) {
+    count[y - 'a']--;
   }
   for (int i = 0; i < 26; i++) {
     if (count[i] == 1) {
