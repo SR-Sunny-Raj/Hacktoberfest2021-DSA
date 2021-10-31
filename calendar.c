@@ -14,11 +14,11 @@ void gotoxy(int x,int y)
 void printmonth(int day,int start)
 {
     gotoxy(5,0);
-    printf("  S  M  T  W  T  F  S");
+    printf("  Sun  Mon  Tue  Wed  Thu  Fri  Sat");
     gotoxy(10,2);
     for(int i=1;i<start;i++)printf("   ");
     for(int i=1;i<=day;i++){
-        printf("%3d",i);
+        printf("%2d",i);
         if((i-1+start)%7==0){printf("\n");gotoxy(10,0);}
     }
     gotoxy(0,3);
