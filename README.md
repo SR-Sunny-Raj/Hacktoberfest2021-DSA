@@ -128,6 +128,7 @@ For your PR to count it must be:
 - [complete cpp fundamentals theory](https://github.com/Sushreesatarupa/Description-of-dsa60/blob/main/C%2B%2B%20theory.html)
 - [GFG learn C++](https://practice.geeksforgeeks.org/courses/fork-cpp)
 - [DSA ALL TOPICS](https://www.geeksforgeeks.org/data-structures)
+- [DSA Complete Tutorial](https://www.scaler.com/topics/data-structures/)
 
 ---
 
