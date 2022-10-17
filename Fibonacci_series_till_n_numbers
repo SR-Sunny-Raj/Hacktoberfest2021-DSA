@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int fib(int num){
+    // if(num==0 || num==1){
+    //     return num;
+    // }
+    // else{
+    //     return fib(num-1) + fib(num-2);
+    // }
+
+    // or
+
+    int t1=0, t2=1, nextnum;
+
+    for(int i=1; i<=num; i++){
+        cout<<t1<<endl;
+        nextnum=t1+t2;
+        t1=t2;
+        t2=nextnum;
+    }
+    return 0;
+}
+
+
+int main(){
+    
+int n;
+cin>>n;
+
+fib(n);
+
+return 0;
+}
