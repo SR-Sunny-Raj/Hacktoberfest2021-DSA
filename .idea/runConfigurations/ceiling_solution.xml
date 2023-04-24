@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ceiling_solution" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.sun.org.apache.xml.internal.security.keys.storage.implementations.CertsInFilesystemDirectoryResolver" />
+    <module name="Hacktoberfest2021-DSA" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
