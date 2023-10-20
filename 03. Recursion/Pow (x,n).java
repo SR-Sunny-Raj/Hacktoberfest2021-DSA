@@ -11,14 +11,14 @@
 class Solution {
     public double myPow(double x, int n) {
         double ans1 = 1.0;
-        long a =n;
+        long a = n;
         
         if(a<0){
             a = -1*a;
         }
         while(a>0){
             if(a%2==1){
-                ans1 = ans1 *x;
+                ans1 = ans1 * x;
                 a = a-1;
             }
             
